@@ -78,7 +78,7 @@ The HTRC Feature Reader can be installed by command line. First open a terminal 
 
 If Anaconda was properly installed, you should see something similar to this:
 
-{% include figure.html filename="activating-env.png" caption="Activating the default Anaconda environment." %}
+{% include figure.html filename="activating-env.PNG" caption="Activating the default Anaconda environment." %}
 
 Now, you need to type one command:
 
@@ -203,7 +203,7 @@ print("http://hdl.handle.net/2027/%s" % vol.id)
     http://hdl.handle.net/2027/nyp.33433074811310
 
 
-{% include figure.html filename="June-cover.png" caption="Digital copy of sample book." %}
+{% include figure.html filename="June-cover.PNG" caption="Digital copy of sample book." %}
 
 Since the focus of EF is features, more in-depth metadata like genre and subject class needs to be grabbed from other sources. For example, the [HathiTrust Bibliographic API](https://www.hathitrust.org/bib_api) returns information about a book specified by its id; for our current example, that is http://catalog.hathitrust.org/api/volumes/full/htid/nyp.33433074811310.json. Another additional data source for metadata is the [HTRC Solr Proxy](https://wiki.htrc.illinois.edu/display/COM/Solr+Proxy+API+User+Guide), which allows searches for many books at a time.
 
@@ -1040,7 +1040,6 @@ line_counts = vol.line_counts()
 plt.plot(line_counts)
 ```
 
-![png](draft_files/draft_50_1.png)
 {% include figure.html filename="lines_per_page.png" caption="Lines per page." %}
 
 
