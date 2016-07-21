@@ -127,27 +127,3 @@ Before continuing, click on the title to change it to something more descriptive
 
 ## Reading your First Volume
 The HTRC Feature Reader library has three main objects: **FeatureReader**, **Volume**, and **Page**.
-
-The **FeatureReader** object is the interface for loading the dataset files and making sense of them. The files are originally in the JSON format and compressed, which FeatureReader decompresses and parses. It creates an iterator over files, allowing one-by-one access to the files as Volumes. A **Volume** is a representation of a single book or other work. This is where you access features about a work. Many features for a volume are collected from individual pages, to access Page information, you can use the **Page** object.
-
-Let's load two volumes to understand how the FeatureReader works.
-
-
-```python
-from htrc_features import FeatureReader
-# Remember to use '/' for windows, else '\'
-paths = ['data/sample-file1.basic.json.bz2', 'data/sample-file2.basic.json.bz2']
-fr = FeatureReader(paths)
-for vol in fr.volumes():
-    print(vol.title)
-```
-
-    June / by Edith Barnard Delano ; with illustrations.
-    You never know your luck; being the story of a matrimonial deserter, by Gilbert Parker ... illustrated by W.L. Jacobs.
-
-
-Here, the FeatureReader is imported and initialized with file paths pointing to two Extracted Features files. We wrote out the file paths directly here, though when preparing your code for multiple systems, there are better ways to [deal with paths](https://docs.python.org/2/library/os.path.html#os.path.join) in Python. An initialized FeatureReader can be iterated through with a `for` loop. The code in the loop is run for every single volume: the Volume() object for the first volume is assigned to the variable `vol`, the loop code is run, then the next volume is set to `vol`, and so on.
-
-You may recognize `for` loops from past experience iterating through what is known as a `list` in Python. However, it is important to note that `fr.volumes()` is *not* a list. If you try to access it directly, it won't print all the volumes; rather, it identifies itself as a different data structure known as a generator:
-
-{% include figure.html filename="generator.png" caption="GENERATOR" %}
