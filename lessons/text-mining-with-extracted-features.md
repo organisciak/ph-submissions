@@ -56,3 +56,35 @@ The skills taught here are focused on flexibly accessing and working with alread
 To follow along, download [lesson_files.zip](https://github.com/htrc/HTRC-Programming-Historian/releases/download/v.0.1/lesson_files.zip) and unzip it to any directory you choose.
 
 The lesson files include a sample of files from the HTRC Extracted Features dataset. After you learn to use the EF data in this lesson, you may want to work with the entirety of the dataset. The details on how to do this are described in [Appendix: rsync](#Appendix: rsync).
+
+
+## Installation
+
+For this lesson, you need to install the HTRC Feature Reader library for Python alongside the data science libraries that it depends on.
+
+For ease, this lesson will focus on installing Python through a scientific distribution called Anaconda. Anaconda is an easy-to-install Python distribution that already includes most of the dependencies for the HTRC Feature Reader.
+
+To install Anaconda, download the installer for your system from the [Anaconda download page](https://www.continuum.io/downloads) and follow their instructions for installation of either the Windows 64-bit Graphical Installer or the Mac OS X 64-bit Graphical Installer. You can choose either version of Python for this lesson. If you have followed earlier lessons on Python at the *Programming Historian*, you are using Python 2, but the HTRC Feature Reader also supports Python 3.
+
+{% include figure.html filename="conda-install.PNG" caption="Conda Install." %}
+
+### Installing the HTRC Feature Reader
+
+The HTRC Feature Reader can be installed by command line. First open a terminal application:
+
+- *Windows*: Open 'Command Prompt' from the Start Menu and type: `activate`.
+- *Mac OX/Linux*: Open 'Terminal' from Applications and type `source activate`.
+
+If Anaconda was properly installed, you should see something similar to this:
+
+{% include figure.html filename="activating-env.png" caption="Activating the default Anaconda environment." %}
+
+Now, you need to type one command:
+
+```bash
+conda install -c organisciak htrc-feature-reader
+```
+
+This command installs the HTRC Feature Reader and its necessary dependencies. That's it! At this point you have everything necessary to start reading HTRC Feature Reader files.
+
+> *psst*, advanced users: You can install the HTRC Feature Reader *without* Anaconda with `pip install htrc-feature-reader`, though for this lesson you'll need to install two additional libraries `pip install matplotlib jupyter`. Also, note that not all manual installations are alike because of hard-to-configure system optimizations: this is why we recommend Anaconda. If you think your code is going slow, you should check that Numpy has access to [BLAS and LAPACK libraries](http://stackoverflow.com/a/19350234/233577) and install [Pandas recommended packages](http://pandas.pydata.org/pandas-docs/version/0.15.2/install.html#recommended-dependencies). The rest is up to you, advanced user!
