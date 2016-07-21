@@ -98,32 +98,4 @@ Jupyter gives you an interactive version of Python (called IPython) that you can
 
 Jupyter was installed alongside Anaconda in the previous section, so it should be available to load now.
 
-{% include figure.html filename="notebook1.PNG" %}
-
-From the Start Menu (Windows) or Applications directory (Mac OS), open "Jupyter notebook". This will start Jupyter on your computer and open a browser window. Keep the console window in the background, the browser is where the magic happens.
-
-{% include figure.html filename="open-notebook.PNG" %}
-
-If your web browser does not open automatically, Jupyter can be accessed by going to the address "localhost:8888" - or a different port number, which is noted in the console ("The Jupyter Notebook is running at..."):
-
-{% include figure.html filename="notebook-start.png" %}
-
-Jupyter is now showing a directory structure from your home folder. Navigate to the lesson folder where you unzipped [lesson_files.zip](https://github.com/htrc/HTRC-Programming-Historian/releases/download/v.0.1/lesson_files.zip).
-
-In the lesson folder, open `Start Here.pynb`: your first notebook!
-
-{% include figure.html filename="notebook-hello-world.png" caption="Hello world in a notebook." %}
-
-Here there are instructions for editing a cell of text or code, and running it. Try editing and running a cell, and notice that it only affects itself. Here are a few tips for using the notebook as the lesson continues:
-
-- New cells are created with the <i class="fa-plus fa"> Plus</i> button in the toolbar. When not editing, this can be done by pressing 'b' on your keyboard.
-- New cells are "code" cells by default, but can be changed to "Markdown" (a type of text input) in a dropdown menu on the toolbar. In edit mode, you can paste in code from this lesson or type it yourself.
-- Switching a cell to edit mode is done by pressing Enter.
-- Running a cell is done by clicking <i class="fa-step-forward fa"> Play</i> in the toolbar, or with `Ctrl+Enter` (`Cmd+Return` on Mac OS). To run a cell and immediately move forward, use `Shift+Enter` instead.
-
-> An example of a full-fledged notebook is included with the lesson files in `example/Lesson Draft.ipynb`.
-
-Before continuing, click on the title to change it to something more descriptive than "Start Here".
-
-## Reading your First Volume
-The HTRC Feature Reader library has three main objects: **FeatureReader**, **Volume**, and **Page**.
+{% include figure.html filename="notebook1.PNG" caption="CAPTION" %}
