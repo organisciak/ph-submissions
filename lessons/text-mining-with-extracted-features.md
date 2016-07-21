@@ -150,4 +150,4 @@ Here, the FeatureReader is imported and initialized with file paths pointing to 
 
 You may recognize `for` loops from past experience iterating through what is known as a `list` in Python. However, it is important to note that `fr.volumes()` is *not* a list. If you try to access it directly, it won't print all the volumes; rather, it identifies itself as a different data structure known as a generator:
 
-{% include figure.html filename="generator.png" %}
+{% include figure.html filename="generator.png" caption="GENERATOR" %}
